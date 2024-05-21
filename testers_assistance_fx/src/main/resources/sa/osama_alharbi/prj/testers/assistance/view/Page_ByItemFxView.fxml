@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="280.0" minWidth="280.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sa.osama_alharbi.prj.testers.assistance.controller.Page_ByItemFxController">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <VBox HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="nameTagTxt" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="selectedPathTypeTxt" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox maxHeight="1.7976931348623157E308">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" VBox.vgrow="ALWAYS">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="isCorrectWayFont" fill="#b8a109" glyphName="EXCLAMATION_TRIANGLE" size="18" />
+                     </graphic>
+                  </Label>
+                  <Button contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickDelete" style="-fx-background-color: transport;" text="X" VBox.vgrow="ALWAYS">
+                     <graphic>
+                        <FontAwesomeIconView fill="#d31616" glyphName="TRASH" size="18" />
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

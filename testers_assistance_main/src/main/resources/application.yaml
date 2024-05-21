@@ -1,0 +1,24 @@
+server:
+  port: 5551
+
+spring:
+  application:
+    name: Testers Helper
+  jpa:
+    hibernate:
+#      ddl-auto: create-drop
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mariadb://localhost:3306/testers_helper?createDatabaseIfNotExist=true
+    username: root
+    password: toor
+    driver-class-name: org.mariadb.jdbc.Driver
+    init-sql: "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci;"
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+    enabled: true
+
+log4j:
+  logger:
+    sa: INFO

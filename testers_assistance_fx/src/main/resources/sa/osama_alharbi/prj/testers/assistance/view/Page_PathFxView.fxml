@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="500.0" minWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sa.osama_alharbi.prj.testers.assistance.controller.Page_PathFxController">
+   <children>
+      <VBox layoutX="10.0" layoutY="10.0" spacing="3.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <GridPane maxWidth="1.7976931348623157E308">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="70.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="70.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <VBox GridPane.columnSpan="2">
+                     <children>
+                        <Label text="FullXPath">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox maxHeight="40.0" minHeight="40.0" prefHeight="40.0" spacing="3.0">
+                           <children>
+                              <TextField fx:id="fullXPathTxt" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button contentDisplay="GRAPHIC_ONLY" maxHeight="40.0" maxWidth="40.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onAction="#onClickCopyFullXPath" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #0f75ff; -fx-background-radius: 0 20 20 0;" text="C">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="COPY" size="18" />
+                                 </graphic></Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Is List items">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <CheckBox contentDisplay="GRAPHIC_ONLY" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="CheckBox" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </VBox>
+                  <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Type">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                        <ComboBox fx:id="typeCombo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </ComboBox>
+                     </children>
+                  </VBox>
+               </children>
+            </GridPane>
+            <TableView fx:id="tbl" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="checkCol" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="check" />
+                <TableColumn fx:id="typeCol" maxWidth="80.0" minWidth="80.0" text="type" />
+                  <TableColumn fx:id="pathCol" prefWidth="75.0" text="path" />
+                  <TableColumn fx:id="counterCol" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="C" />
+                  <TableColumn fx:id="copyPathCol" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="P" />
+                  <TableColumn fx:id="copyByCol" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="B" />
+              </columns>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button graphicTextGap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickRefresh" style="-fx-background-color: #0f75ff; -fx-background-radius: 0 0 20 20;" text="Refresh" textFill="WHITE">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" size="18" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

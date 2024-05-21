@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="280.0" minWidth="280.0" prefWidth="280.0" style="-fx-border-color: #000000; -fx-border-width: 3; -fx-border-radius: 25; -fx-background-radius: 25;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sa.osama_alharbi.prj.testers.assistance.controller.Project_ItemFxController">
+   <children>
+      <Label fx:id="titleTxt" alignment="CENTER" maxHeight="200.0" maxWidth="1.7976931348623157E308" minHeight="200.0" prefHeight="200.0" text="Label" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox spacing="1.0">
+         <children>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickEnter" style="-fx-background-radius: 0 0 0 25;" text="Enter" HBox.hgrow="ALWAYS" />
+            <MenuButton contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" style="-fx-background-radius: 0 0 25 0;" text="...">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Edit">
+                     <graphic>
+                        <FontAwesomeIconView />
+                     </graphic>
+                  </MenuItem>
+                <MenuItem mnemonicParsing="false" text="Delete">
+                     <graphic>
+                        <FontAwesomeIconView />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </MenuButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

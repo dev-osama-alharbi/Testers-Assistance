@@ -1,0 +1,23 @@
+.table-row-path-full {
+   -fx-background-color: #FFCE7A;
+   -fx-fill: #000000;
+}
+.table-row-path-full .text {
+       -fx-fill: #000000;
+}
+
+.table-row-path-not {
+   -fx-background-color: #C62D42;
+       -fx-fill: #FFFFFF;
+}
+.table-row-path-not .text {
+       -fx-fill: #FFFFFF;
+}
+
+.table-row-path-good {
+   -fx-background-color: #004000;
+       -fx-fill: #FFFFFF;
+}
+.table-row-path-good .text {
+       -fx-fill: #FFFFFF;
+}
